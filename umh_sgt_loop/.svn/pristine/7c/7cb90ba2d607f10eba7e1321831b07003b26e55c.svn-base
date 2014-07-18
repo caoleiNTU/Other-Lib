@@ -1,0 +1,41 @@
+########################################################################
+# NAME: log4j.properties
+# PROJECT: UMH
+# DESCRIPTION: Logging Configuration File for Log4j in UMH
+# DEBUG<INFO<WARN<ERROR<FATAL.
+########################################################################
+
+### ROOT #################################################################
+log4j.rootCategory=INFO, CONSOLE
+
+#org.hibernate.loader=info
+#log4j.logger.org.hibernate.loader=info
+
+#log4j.rootLogger=INFO, CONSOLE
+log4j.logger.org.hibernate=INFO, CONSOLE
+log4j.logger.org.hibernate.SQL=INFO, CONSOLE
+log4j.logger.org.hibernate.jdbc=INFO, CONSOLE
+
+log4j.logger.umh=INFO, UMHLOGFILE
+log4j.logger.umh.additivity=true
+
+### APPENDER : STDOUT/CONSOLE #################################################
+log4j.appender.CONSOLE=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.CONSOLE.Append=true
+log4j.appender.CONSOLE.DatePattern='.'yyyy-MM-dd
+#log4j.appender.CONSOLE.Threshold=INFO
+log4j.appender.CONSOLE.File=logs/UMHSGTLoop.log
+log4j.appender.CONSOLE.MaxFileSize=20MB
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+
+### APPENDER : UMHLOGFILE ####################################################
+# Main Rolling log file for UMH
+log4j.appender.UMHLOGFILE=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.UMHLOGFILE.Append=true
+log4j.appender.UMHLOGFILE.DatePattern='.'yyyy-MM-dd
+log4j.appender.UMHLOGFILE.File=logs/umh.log
+log4j.appender.UMHLOGFILE.MaxFileSize=20MB
+#log4j.appender.UMHLOGFILE.MaxBackupIndex=3
+log4j.appender.UMHLOGFILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.UMHLOGFILE.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n

@@ -1,0 +1,213 @@
+# Time interval for ignoring any EMASLINK down which receive within this time interval
+
+# @default=1hour=3600000ms
+PTY_NOPROCEMASLNK_INTERVAL=3600000
+
+# Ping Time Interval
+PTY_INTERVAL_PING=30000
+
+# Login return value. DUMMY for Testing Purpose
+PTY_LOGINRETURNVALUE=true
+
+# directory for log files
+#PTY_DIR_LOG=/app/mxadmin/logfiles/
+PTY_DIR_LOG=C:/MAXIMO/log/
+
+# UMH_DUP_ALARM_LIST start up time during link initialization
+PTY_STARTUPTIME=60000
+
+# MAXIMO Login
+#PTY_INT_HOST=192.168.30.10
+PTY_INT_HOST=10.180.8.126
+PTY_INT_USERNAME=USR_INT
+#PTY_INT_LOGIN=maxintfusr
+PTY_ENCMAXIMOLOGIN =bWF4aW50ZnVzcg==
+PTY_INT_USERNAMETL=USR_INT
+PTY_ENCMAXIMOLOGINTL=bWF4aW50ZnVzcg==
+PTY_INT_USERNAMEGL=USR_INT
+PTY_ENCMAXIMOLOGINGL=bWF4aW50ZnVzcg==
+
+# Connect to STAGING SERVER  properties
+#PTY_SS_DBUSERNAME=umhstaticdata
+#PTY_SS_DBPASSWORD=umhrd119
+#PTY_SS_DBSID=SSRO
+#PTY_SS_DBSERVERNAME=killiney
+#PTY_SS_DBPORTNUMBER=1521
+PTY_SS_DBUSERNAME=umhstaticdata
+#PTY_SS_DBPASSWORD=umhrd119
+
+PTY_ENCSSDBLOGIN =VU1IUkQxMTk=
+PTY_SS_DBSID=SSRO
+PTY_SS_DBSERVERNAME=192.168.30.10
+PTY_SS_DBPORTNUMBER=1521
+
+# Connect to UMH database properties
+PTY_DBUSERNAME=umhinterface
+#PTY_DBPASSWORD=itptumhintf
+PTY_ENCUMHDBLOGIN =aXRwdHVtaGludGY=
+#PTY_DBSID=UMHDB
+PTY_DBSID=UMH
+#PTY_DBSERVERNAME=10.66.18.200
+#PTY_DBSERVERNAME=192.168.30.10
+PTY_DBSERVERNAME=10.180.8.54
+PTY_DBPORTNUMBER=1522
+
+# Buffer limit for sending a certain number of message at one time during initialization
+PTY_BUFFER_WO= 100
+PTY_BUFFER_SMS= 100
+PTY_BUFFER_DUP_ALARM_LIST= 100
+PTY_CLEARSMSBUFFERTIME=120000
+
+# Minimal wait time interval between each interface method call
+PTY_MIN_WAIT_TIME = 5000
+
+
+# Sleep time between each MAXIMO method call
+PTY_SLEEP_TIME = 2000
+PTY_EQPSLEEP_TIME = 5000
+
+# Wait time before sending the duplicate Alarm List after link down / initialisation
+PTY_DUPALARM_SEND_WAIT_TIME = 60000
+
+# Sleep time between the Report Server and Database Server check the power status
+PTY_POWERSTATUS_SLEEP=180000
+
+# Region Computer(RC) number
+PTY_RC = RC1,RC2,RC3,RC4,RC5,RC6,RC7,RC8,RC9,RC10,RC11,RC12,RC13,RC14,RC15,RC16,RC17
+
+# Proccessing Event Log Day
+PTY_SATURDAY=NO
+PTY_SUNDAY =NO
+PTY_HOLIDAY=NO
+
+# Processing for Event Log - Character to identify the PL and DA ( may Changed)
+PTY_FIRSTLINECHAR =P
+PTY_SECONDLINECHAR=L
+PTY_FIRSTDACHAR =D
+PTY_SECONDDACHAR =A
+PTY_FIRSTPBCHAR =P
+PTY_SECONDPBCHAR =B
+
+# Description for work flow node
+PTY_WFDESCRIPTION=To acknowledge the assigned WO
+PTY_WFDESCRIPTIONEQPFTPEQTI=FTP EQTI Special Task
+PTY_WFDESCRIPTIONEQPFTPDAPB=FTP DAPB Special Task
+PTY_WFDESCRIPTIONEQPFTPSCMS=FTP SCMS Special Task
+PTY_WFDESCRIPTIONEQPSMS=SMS Special Task
+PTY_WFDESCRIPTIONEQPEMASLINK=EMAS LINK Special Task
+PTY_WFDESCRIPTIONEQPGLIDELINK=GLIDE LINK Special Task
+PTY_WFDESCRIPTIONEQPSTAGING=STAGING Special Task
+PTY_WFDESCRIPTIONEQPUMHLINK=UMH LINK Special Task 
+PTY_WFDESCRIPTIONEQPEALINK=EA LINK Special Task 
+PTY_WFDESCRIPTIONEQPPGSLINK=PGS LINK Special Task
+PTY_WFDESCRIPTIONEQPSTLINK=ST LINK Special Task
+PTY_WFDESCRIPTIONEQPTCSLINK=TCS LINK Special Task
+
+# String for starting visibroker UMH Server
+#PTY_UMHSERVER=vbj -Dvbroker.agent.enableLocator=false -Dvbroker.se.iiop_tp.host=192.168.10.10 -DORBDefaultInitRef=corbaloc::192.168.10.10:21000 Server
+PTY_UMHSERVER=/usr/local/BES/bin/vbj -Dvbroker.agent.enableLocator=false -Dvbroker.se.iiop_tp.host=192.168.30.10 -DORBDefaultInitRef=corbaloc::192.168.30.10:21000 Server
+#PTY_UMHSERVER=/usr/local/BES/bin/start_ns
+
+#i-transport server configuration
+PTY_ITRANSPORTTCONTEXT=ITRANSPORT
+PTY_ITPTCONTEXT=ITRANSPORT/ITPT
+PTY_ITPTSERVEROBJECT=ITRANSPORT/ITPT/umh_itpt
+
+#Naming Server configuration
+PTY_NAMINGSERVICE=NameService
+
+#UMH server configuration
+PTY_UMHMAINTCONTEXT=ITRANSPORT
+PTY_UMHCONTEXT =ITRANSPORT/UMH
+PTY_UMHSERVEROBJECT =ITRANSPORT/UMH/itpt_umh
+
+# Initialisation Key and Salt for ITPT-UMH
+PTY_ENCITPTINITSTRING =SVRQVC1VTUggSW5pdFN0cmluZw==
+PTY_ENCITPTSALT = SVRQVC1VTUg=
+PTY_ENCITPTPW = kLi4SHm/MvVliqG5UiEVC+7ygOTpU53V
+#PTY_ENCITPTPW = LfAInlIcFQrPKKiBCvxS
+PTY_ITPTITERATIONCOUNT = 20
+PTY_ITPTUSERID =itpt
+
+# Initialisation Key and Salt for UMH-ITPT
+PTY_ENCUMHINITSTRING =VU1ILUlUUFQgSW5pdFN0cmluZw==
+PTY_ENCUMHSALT =VU1ILUlUUFQ=
+PTY_ENCUMHPW =dbT8++xfQnS27GXRwoNEjeW29VJNgZ8Z
+#PTY_ENCUMHPW =oP1Is3t+Q3AdpwGxMPoSjyf/
+PTY_UMHITERATIONCOUNT = 20
+PTY_UMHUSERID =umh
+
+# Maximo data
+MAX_TEMP_PATH=/app/mxadmin/MAXIMO/temp/
+MAX_TEMP_DL_PATH=/app/mxadmin/MAXIMO/test/
+MAX_SERVERNAME=192.168.30.10
+MAX_PORTNUMBER=1521
+MAX_SID=UMHDB
+MAX_USERNAME=usr_int
+MAX_PASSWORD=maxintfusr
+MAX_USERNAME_SCHEMA=MAXIMO
+MAX_PASSWORD_SCHEMA=MAXIMO
+MAX_DOCLINKS=/app/mxadmin/MAXIMO/doclinks/
+
+# Monitor variables in number of days
+MAX_MAINTENANCE_MONITOR=7
+MAX_DLP_MONITOR=30
+
+# UMH-ITPT Interface - Connection Link down
+PTY_UMH_EQUIPMENTCODE=ITPTLINK
+PTY_UMH_FAILURECODE=ITPTLINK
+PTY_UMH_PROBLEMCODE=LINKFAIL
+
+# Duplicate Records in Alarm Open (in hours)
+PTY_UMH_ALARMOPEN_DUPLICATE_HOURS=3
+PTY_UMH_ALARMOPEN_DUPLICATE_HOURS_SGT=24
+
+# Duplicate Records in EMAS Alarm Open (in hours)
+PTY_UMH_EMASALARMOPEN_DUPLICATE_HOURS=3
+
+##########################################################
+# Auto alarm open and immediate create wo
+# Site ID:Reported Failure Class:Asset Code
+##########################################################
+PTY_UMH_AUTO_ALARMOPEN_LIST=EMAS:ITM:SSITM_ITM1
+
+##########################################################
+# Auto alarm open and immediate create wo
+# Reported Failure Class
+##########################################################
+PTY_UMH_AUTO_EMASALARMOPEN_LIST=WCA
+
+PTY_POOLDB_SLEEP_TIME=0
+
+##########################################################
+# TLS Line Fault Config
+#
+# The date must be in DD-MON-YYYY format or sysdate keyword
+##########################################################
+BOFYWD_THRESHOLD_OCCURRENCE=3
+LF_THRESHOLD_HOURS=8
+
+PTY_BOFYWD_DATE=SYSDATE
+PTY_BOFYWD_START_DAY=D-7
+PTY_BOFYWD_END_DAY=D-1
+
+PTY_LF_GTE8HRS_DATE=SYSDATE
+PTY_LF_GTE8HRS_START_DAY=D-1
+PTY_LF_GTE8HRS_END_DAY=D-1
+
+PTY_LF_LT8HRS_DATE=SYSDATE
+PTY_LF_LT8HRS_START_DAY=D-2
+PTY_LF_LT8HRS_END_DAY=D-2
+
+##########################################################
+# Push Button GMP & IRS Config
+##########################################################
+PTY_GMP_IRS_THRESHOLD_OCCURENCE=3
+
+##########################################################
+# Define the SMS threshold - SGT_LOOP APPS 
+# For CM in hours and PM is in days
+##########################################################
+PTY_SMS_THRESHOLD_CM=2
+PTY_SMS_THRESHOLD_DAYS_PM=1
+
